@@ -404,9 +404,9 @@ import { Typography } from "@mui/material";
 
 const AboutPage = () => {
   return (
-    <div className="p-6">
-      <Typography variant="h4">About Us</Typography>
-    </div>
+    \x3Cdiv className="p-6"\x3E
+      \x3CTypography variant="h4"\x3EAbout Us\x3C/ Typography\x3E
+    \x3C/div\x3E
   );
 };
 
