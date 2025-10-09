@@ -1,6 +1,7 @@
 import storage from "redux-persist/lib/storage";
 import hardSet from "redux-persist/lib/stateReconciler/hardSet";
 import { configureStore } from "@reduxjs/toolkit";
+import type { AnyAction, Reducer } from "redux";
 import { persistReducer, persistStore } from "redux-persist";
 import { appReducer } from "@/store/app/app.reducer.ts";
 import { setupListeners } from "@reduxjs/toolkit/query";
@@ -28,7 +29,11 @@ const persistConfig = {
 export const store = configureStore({
   devTools: import.meta.env.MODE === "development",
   reducer: {
-    app: persistReducer<AppState>(persistConfig, appReducer),
+    // Cast combined reducer to align redux-persist (Action<any>) with RTK's UnknownAction
+    app: persistReducer<AppState, AnyAction>(
+      persistConfig as any,
+      appReducer as unknown as Reducer<AppState, AnyAction>
+    ),
     [apiService.reducerPath]: apiService.reducer,
   },
   middleware: (gdm) =>

@@ -13,10 +13,7 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "types": [
-      "vite/client",
-      "vite-plugin-svgr/client"
-    ],
+    "types": ["vite/client", "vite-plugin-svgr/client", "vitest"],
 
     /* Linting */
     "strict": true,
@@ -41,7 +38,7 @@
       "@components/*": ["components/*"],
       "@assets/*": ["assets/*"],
       "@utils/*": ["utils/*"],
-      "@services/*": ["services/*"],
+      "@services/*": ["services/*"]
     }
   },
   "include": [
@@ -49,9 +46,11 @@
     "app/**/*.d.ts",
     "app/types/index.d.ts",
     "vite.config.ts",
+    "vitest.config.ts",
     "postcss.config.js",
     ".eslintrc.cjs",
     ".prettierrc",
-    ".svgrrc.js"
-  ],
+    ".svgrrc.js",
+    "setupTests.ts"
+  ]
 }
