@@ -6,6 +6,7 @@ import {
   Chip,
   Container,
   Divider,
+  InputAdornment,
   Paper,
   Stack,
   TextField,
@@ -84,10 +85,14 @@ export default function ContactPage() {
                 placeholder="Jane Doe"
                 value={form.name}
                 onChange={handleChange("name")}
-                InputProps={{
-                  startAdornment: (
-                    <Person sx={{ mr: 1, color: "text.secondary" }} />
-                  ),
+                slotProps={{
+                  input: {
+                    startAdornment: (
+                      <InputAdornment position="start">
+                        <Person sx={{ mr: 1, color: "text.secondary" }} />
+                      </InputAdornment>
+                    ),
+                  },
                 }}
                 required
               />
@@ -97,10 +102,14 @@ export default function ContactPage() {
                 placeholder="jane@example.com"
                 value={form.email}
                 onChange={handleChange("email")}
-                InputProps={{
-                  startAdornment: (
-                    <Email sx={{ mr: 1, color: "text.secondary" }} />
-                  ),
+                slotProps={{
+                  input: {
+                    startAdornment: (
+                      <InputAdornment position="start">
+                        <Email sx={{ mr: 1, color: "text.secondary" }} />
+                      </InputAdornment>
+                    ),
+                  },
                 }}
                 required
               />
@@ -109,10 +118,14 @@ export default function ContactPage() {
                 placeholder="How can we help?"
                 value={form.subject}
                 onChange={handleChange("subject")}
-                InputProps={{
-                  startAdornment: (
-                    <SubjectIcon sx={{ mr: 1, color: "text.secondary" }} />
-                  ),
+                slotProps={{
+                  input: {
+                    startAdornment: (
+                      <InputAdornment position="start">
+                        <SubjectIcon sx={{ mr: 1, color: "text.secondary" }} />
+                      </InputAdornment>
+                    ),
+                  },
                 }}
               />
               <TextField
