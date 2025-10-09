@@ -32,3 +32,4 @@ const repo = apiService.injectEndpoints({
 });
 
 export const { useGetReposQuery } = repo;
+export const repoApi = repo;

@@ -2,14 +2,14 @@ import storage from "redux-persist/lib/storage";
 import hardSet from "redux-persist/lib/stateReconciler/hardSet";
 import { configureStore } from "@reduxjs/toolkit";
 import type { AnyAction, Reducer } from "redux";
-import { persistReducer, persistStore } from "redux-persist";
+import { persistReducer, persistStore, PersistConfig } from "redux-persist";
 import { appReducer } from "@/store/app/app.reducer.ts";
 import { setupListeners } from "@reduxjs/toolkit/query";
 import { encryptTransform } from "redux-persist-transform-encrypt";
 import { apiService } from "@services/api.service.ts";
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
 
-const persistConfig = {
+const persistConfig: PersistConfig<AppState> = {
   keyPrefix: "pro:",
   key: "pro",
   storage: storage,
@@ -31,7 +31,7 @@ export const store = configureStore({
   reducer: {
     // Cast combined reducer to align redux-persist (Action<any>) with RTK's UnknownAction
     app: persistReducer<AppState, AnyAction>(
-      persistConfig as any,
+      persistConfig,
       appReducer as unknown as Reducer<AppState, AnyAction>
     ),
     [apiService.reducerPath]: apiService.reducer,

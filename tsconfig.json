@@ -51,6 +51,7 @@
     ".eslintrc.cjs",
     ".prettierrc",
     ".svgrrc.js",
-    "setupTests.ts"
+    "setupTests.ts",
+    "app/__tests__"
   ]
 }
