@@ -32,17 +32,19 @@
     "allowSyntheticDefaultImports": true,
 
     /* Extra */
-    "baseUrl": "./app",
+    "baseUrl": "./",
     "paths": {
-      "@/*": ["./*"],
-      "@components/*": ["components/*"],
-      "@assets/*": ["assets/*"],
-      "@utils/*": ["utils/*"],
-      "@services/*": ["services/*"]
+      "@/*": ["./app/*"],
+      "@__tests__/*": ["__tests__/*"],
+      "@components/*": ["app/components/*"],
+      "@assets/*": ["app/assets/*"],
+      "@utils/*": ["app/utils/*"],
+      "@services/*": ["app/services/*"]
     }
   },
   "include": [
     "app",
+    "__tests__",
     "app/**/*.d.ts",
     "app/types/index.d.ts",
     "vite.config.ts",
@@ -50,8 +52,6 @@
     "postcss.config.js",
     ".eslintrc.cjs",
     ".prettierrc",
-    ".svgrrc.js",
-    "setupTests.ts",
-    "app/__tests__"
+    ".svgrrc.js"
   ]
 }

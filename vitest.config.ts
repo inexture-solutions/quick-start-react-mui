@@ -4,7 +4,8 @@ export default defineConfig({
   test: {
     environment: "jsdom",
     globals: true,
-    setupFiles: ["./setupTests.ts"],
+    // point to the setup file under __tests__
+    setupFiles: ["./__tests__/setupTests.ts"],
     css: true,
     coverage: {
       reporter: ["text", "html"],
