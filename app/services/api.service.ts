@@ -2,9 +2,8 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { RootState } from "@/store";
 
 export const baseQuery = fetchBaseQuery({
-  baseUrl: "https://api.github.com",
+  baseUrl: import.meta.env.VITE_API_SERVER || "https://api.google.com",
   prepareHeaders: (headers, { getState }) => {
-    // Add auth mechanism to pass tokens to the header
     const token = (getState as () => RootState)()?.app?.auth?.token;
     if (token?.access) {
       headers.set("Authorization", `Bearer ${token.access}`);

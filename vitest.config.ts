@@ -1,11 +1,6 @@
 import { defineConfig } from "vitest/config";
 import path from "path";
-import react from "@vitejs/plugin-react-swc";
-import viteSvgr from "vite-plugin-svgr";
-import tailwindcss from "@tailwindcss/vite";
-
 export default defineConfig({
-  plugins: [react(), viteSvgr(), tailwindcss()],
   test: {
     environment: "jsdom",
     globals: true,
