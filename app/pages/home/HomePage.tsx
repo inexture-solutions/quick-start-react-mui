@@ -30,13 +30,13 @@ import {
 import { ReactNode } from "react";
 
 const TechStack = [
-  { name: "React", version: "19.2.0", color: "#61DAFB" },
-  { name: "Material-UI", version: "7.3.4", color: "#0081CB" },
-  { name: "Tailwind CSS", version: "4.1.14", color: "#06B6D4" },
-  { name: "React Router", version: "7.9.4", color: "#CA4245" },
-  { name: "Redux Toolkit", version: "2.9.0", color: "#764ABC" },
+  { name: "React", version: "19.2.4", color: "#61DAFB" },
+  { name: "Material-UI", version: "7.3.9", color: "#0081CB" },
+  { name: "Tailwind CSS", version: "4.2.1", color: "#06B6D4" },
+  { name: "React Router", version: "7.13.1", color: "#CA4245" },
+  { name: "Redux Toolkit", version: "2.11.2", color: "#764ABC" },
   { name: "TypeScript", version: "5.9.3", color: "#3178C6" },
-  { name: "Vite", version: "7.1.9", color: "#646CFF" },
+  { name: "Vite", version: "8.0.0", color: "#646CFF" },
 ];
 
 function Feature({
