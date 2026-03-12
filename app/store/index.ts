@@ -1,5 +1,5 @@
-import storage from "redux-persist/lib/storage";
-import hardSet from "redux-persist/lib/stateReconciler/hardSet";
+import storage from "redux-persist/es/storage";
+import hardSet from "redux-persist/es/stateReconciler/hardSet";
 import { configureStore } from "@reduxjs/toolkit";
 import type { AnyAction, Reducer } from "redux";
 import { persistReducer, persistStore, PersistConfig } from "redux-persist";
